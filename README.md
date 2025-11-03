@@ -28,3 +28,44 @@ Here’s a view of my AWS Lambda function trigger setup:
 
 
 ## ⚙️ Architecture Workflow
+[S3 Source Bucket] → [Lambda Function] → [DynamoDB Table] → [S3 Destination Bucket] → [SNS Notification]
+
+
+---
+
+## 🧑‍💻 Lambda Function (Python)
+See [`lambda_function.py`](lambda_function.py) for full source code.  
+The function handles both **S3 triggers** and **direct Lambda invocations** for testing.
+
+---
+
+## 🧾 Deployment Steps
+1. Create two S3 buckets: **source** and **destination**.  
+2. Create a **DynamoDB table** (e.g., `newtable`).  
+3. Create an **SNS topic** for success notifications.  
+4. Create a **Lambda function** using `lambda_function.py`.  
+5. Attach an **IAM role** with these permissions:
+   - AmazonS3FullAccess  
+   - AmazonDynamoDBFullAccess  
+   - AmazonSNSFullAccess  
+   - CloudWatchLogsFullAccess  
+6. Add an **S3 trigger** for `ObjectCreated` events to invoke Lambda automatically.  
+7. Upload a file to the source bucket to test the workflow.
+
+---
+
+## 📈 Outcome
+✅ Serverless and fully automated data pipeline  
+✅ Real-time event handling and notifications  
+✅ Secure access using IAM policies  
+
+---
+
+## 📂 Repository Structure
+
+
+aws-dynamodb-s3-lambda-automation/
+│
+├── lambda_function.py
+├── s3-event-sample.json
+└── README.md
