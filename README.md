@@ -24,7 +24,7 @@ Whenever a file is uploaded to the **Source S3 bucket**, Lambda:
 ---## 📸 Lambda Trigger Screenshot
 Here’s a view of my AWS Lambda function trigger setup:
 
-![Lambda Trigger Screenshot](lambda-trigger-screenshot.png)
+![Lambda Trigger Screenshot](lambda-trigger-screenshot.jpg)
 
 
 ## ⚙️ Architecture Workflow
