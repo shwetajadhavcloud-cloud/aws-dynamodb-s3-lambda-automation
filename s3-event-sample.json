@@ -1,0 +1,15 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "ap-south-1",
+      "eventTime": "2025-11-03T10:00:00.000Z",
+      "eventName": "ObjectCreated:Put",
+      "s3": {
+        "bucket": { "name": "source-bucket-example" },
+        "object": { "key": "test-file.txt", "size": 1024 }
+      }
+    }
+  ]
+}
